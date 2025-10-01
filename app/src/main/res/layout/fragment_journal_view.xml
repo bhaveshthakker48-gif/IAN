@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:background="@color/white"
+        app:cardElevation="5dp"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/layout_privacy"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+
+
+            <ImageView
+                android:id="@+id/backbutton"
+                android:layout_width="19dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/vector__5_"
+                android:layout_marginStart="10dp"
+                />
+            <TextView
+                android:id="@+id/eventheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About BNA"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:singleLine="true"
+                android:layout_marginEnd="20dp"
+                android:visibility="visible"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/backbutton"
+                android:layout_marginStart="18dp"
+                android:layout_centerVertical="true"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="3dp"
+                android:scaleType="fitStart"
+                android:layout_marginBottom="3dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <org.bombayneurosciences.bna_2023.CustomPageUtils.CurlView
+        android:layout_width="match_parent"
+        android:id="@+id/curl"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview"/>
+
+</LinearLayout>

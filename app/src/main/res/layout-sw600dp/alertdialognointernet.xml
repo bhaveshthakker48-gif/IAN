@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/rounded_back"
+    android:layout_marginStart="150dp"
+    android:layout_marginEnd="150dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/nointernet"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="No Internet Connection"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/white1"/>
+        <TextView
+            android:id="@+id/textnointernetconn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please connect to the internet ."
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/black"
+            />
+
+        <!-- Yes Button -->
+        <TextView
+            android:id="@+id/buttonok"
+            android:text="OK"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>

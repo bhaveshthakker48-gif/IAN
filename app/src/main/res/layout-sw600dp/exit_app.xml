@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/rounded_back"
+    android:layout_marginStart="185dp"
+    android:layout_marginEnd="185dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical">
+
+            <!-- ImageView -->
+            <ImageView
+                android:id="@+id/lineview"
+                android:layout_width="4dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/logout_line"/>
+
+            <!-- Logout Text -->
+            <TextView
+                android:id="@+id/notificationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exit app"
+                android:textSize="20dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/poppins"
+                android:singleLine="false"
+                android:gravity="left|center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="#323336"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Logout Confirmation Text -->
+        <TextView
+            android:id="@+id/textViewLogoutConfirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Do you want to exit the app?"
+            android:padding="5dp"
+            android:text="15dp"
+            android:textColor="#323336" />
+
+        <ImageView
+            android:id="@+id/lineUnderCard"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="#26333626"/>
+
+        <!-- Buttons in Horizontal LinearLayout -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="42dp">
+
+            <!-- Yes Button -->
+            <Button
+                android:id="@+id/buttonNo"
+                android:text="No"
+                android:textColor="#323336"
+                android:textSize="15dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <!-- Vertical Line -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#26333626"/>
+
+            <!-- No Button -->
+            <Button
+                android:id="@+id/buttonYes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Yes"
+                android:textStyle="bold"
+                android:textColor="#59333659"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

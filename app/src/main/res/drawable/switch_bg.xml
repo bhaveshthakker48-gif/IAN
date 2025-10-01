@@ -1,0 +1,14 @@
+<!-- res/drawable/circular_switch_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    >
+    <solid android:color="@color/red"
+        />
+    <size
+    android:width="19dp"
+    android:height="2dp"
+    android:viewportWidth="350"
+    android:viewportHeight="56"/>
+    <corners
+        android:radius="20dp"/>
+</shape>

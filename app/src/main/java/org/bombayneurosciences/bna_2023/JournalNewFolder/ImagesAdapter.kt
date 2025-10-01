@@ -1,0 +1,287 @@
+package org.bombayneurosciences.bna_2023.JournalNewFolder
+
+import android.app.Dialog
+import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.net.ConnectivityManager
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.view.Window
+import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide
+import org.bombayneurosciences.bna_2023.R
+
+class ImagesAdapter(private val context: Context, private val mediaList: List<Image>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    private var totalImageCount = 0
+
+    companion object {
+        const val TYPE_IMAGE = 1
+        const val TYPE_VIDEO = 2
+    }
+
+    inner class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val imageView: ImageView = itemView.findViewById(R.id.imageView)
+        val mediaLabelTextView: TextView = itemView.findViewById(R.id.mediaLabelTextView)
+        val imageNumberTextView: TextView = itemView.findViewById(R.id.imageNumberTextView)
+
+        init {
+
+            imageView.setOnClickListener {
+
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val currentMedia = mediaList[position]
+                    onClick(
+                        imageView,
+                        currentMedia.img_url,
+                        currentMedia.img_label.toString(),
+                        currentMedia.img_no.toString() ?: "N/A",
+                        mediaList.size,
+                        position
+                    )
+                }
+
+
+
+            }
+        }
+    }
+
+    inner class VideoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val thumbnailImageView: ImageView = itemView.findViewById(R.id.thumbnailImageView)
+        val mediaLabelTextView: TextView = itemView.findViewById(R.id.mediaLabelTextView)
+
+//        private var exoPlayer: SimpleExoPlayer? = null
+
+        init {
+            thumbnailImageView.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val currentMedia = mediaList[position]
+                    // Check for network availability
+                    if (isOnline()) {
+                        playVideo(currentMedia)
+                    } else {
+                        // Show an alert or message to the user indicating no internet connection
+                        showNoInternetAlert("Please connect to the internet")
+                    }
+                }
+            }
+
+
+        }
+
+
+//
+    }
+    private fun showNoInternetAlert(message:String) {
+        val dialog = Dialog(context)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setContentView(R.layout.intenet_alert)
+
+        // Find views in the custom dialog layout
+        val notificationTitle: TextView = dialog.findViewById(R.id.notificationTitle)
+        val textViewLogoutConfirmation: TextView = dialog.findViewById(R.id.textViewLogoutConfirmation)
+        val buttonYes: Button = dialog.findViewById(R.id.buttonYes)
+        val buttonNo: Button = dialog.findViewById(R.id.buttonNo)
+
+        // Set notification title and confirmation text
+        notificationTitle.text = "Connectivity Issue"
+        textViewLogoutConfirmation.text = message
+
+        // Set click listener for the Yes button
+        buttonYes.setOnClickListener {
+            // Handle the Yes button click event
+            dialog.dismiss()
+        }
+
+        // Set click listener for the No button
+        buttonNo.setOnClickListener {
+            // Handle the No button click event
+            dialog.dismiss()
+        }
+
+        dialog.show()
+        dialog.window!!.setLayout(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        )
+        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window!!.attributes.windowAnimations = R.style.DialogAnimation
+    }
+
+
+
+    private fun isOnline(): Boolean {
+        val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val networkInfo = connectivityManager.activeNetworkInfo
+        return networkInfo != null && networkInfo.isConnected
+    }
+
+    private fun playVideo(currentMedia: Image) {
+        // Assuming VideoPlaybackActivity is the activity where you want to play the video
+        /*  val intent = Intent(context, VideoPlaybackActivity::class.java)
+
+          // Pass necessary information to VideoPlaybackActivity
+          intent.putExtra("videoUrl", "https://www.telemedocket.com/BNA/public/uploads/caseimages/video/${currentMedia.imagename}")
+          intent.putExtra("videoLabel", currentMedia.imagelable)
+
+          // Start VideoPlaybackActivity
+          context.startActivity(intent)*/
+    }
+
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        return when (viewType) {
+            TYPE_IMAGE -> {
+                val itemView = LayoutInflater.from(context).inflate(R.layout.media_imagess, parent, false)
+                ImageViewHolder(itemView)
+            }
+            TYPE_VIDEO -> {
+                val itemView = LayoutInflater.from(context).inflate(R.layout.media_videoo, parent, false)
+                VideoViewHolder(itemView)
+            }
+            else -> throw IllegalArgumentException("Invalid view type")
+        }
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val currentMedia = mediaList[position]
+
+        when (holder) {
+            is ImageViewHolder -> {
+                // Handle Image
+                Glide.with(context)
+                    .load(currentMedia.img_url)
+                    .into(holder.imageView)
+//                holder.mediaLabelTextView.text = currentMedia.imagelable
+
+                val truncatedText = if (currentMedia.img_label?.length!! > 11) "${currentMedia.img_label.substring(0, 10)}..." else currentMedia.img_label
+                holder.mediaLabelTextView.text = truncatedText.toString()
+                // Calculate total image count and set the label
+                val currentImagePosition = position + 1
+                holder.imageNumberTextView.text = "$currentImagePosition/$totalImageCount"
+
+                Log.d("mytag", "total image count: $currentImagePosition/$totalImageCount")
+                Log.e("mytag", "total image count: ${currentMedia.img_url}")
+
+
+                holder.itemView.setOnClickListener {
+                    // Handle image item click
+                    val videoHolder = VideoViewHolder(
+                        LayoutInflater.from(context).inflate(R.layout.media_video, null)
+                    )
+                    //  videoHolder.playVideo(currentMedia)
+                }
+                holder.itemView.setOnClickListener {
+                    // Handle image item click
+                }
+            }
+
+            is VideoViewHolder -> {
+
+                holder.mediaLabelTextView.text = currentMedia.img_label
+                holder.itemView.setOnClickListener {
+                    // Handle the click event for the video item if needed
+                    // You can add your logic here
+                }
+                // holder.playVideo(currentMedia)
+
+
+            }
+        }
+    }
+
+    // MediaAdapter1.kt
+    fun onClick(view: View, imageUrl: String, imageLabel: String, imageNumber: String, totalImageCount: Int, currentPosition: Int) {
+        if (mediaList[currentPosition].imagetype == "Video") {
+            /*    val intent = Intent(context, VideoPlaybackActivity::class.java)
+                intent.putExtra("videoPath", "https://www.telemedocket.com/BNA/public/uploads/caseimages/video/${mediaList[currentPosition].imagename}")
+                context.startActivity(intent)*/
+        } else {
+            showImagePopup(imageUrl, imageLabel, imageNumber, totalImageCount, currentPosition)
+        }
+    }
+
+    private fun showImagePopup(imageUrl: String, imageLabel: String, imageNumber: String, totalImageCount: Int, currentPosition: Int) {
+        val popupView = LayoutInflater.from(context).inflate(R.layout.imageview_popup, null)
+
+        val viewPagerImages: ViewPager2 = popupView.findViewById(R.id.imageViewPopup)
+        val imageNumberTextView: TextView = popupView.findViewById(R.id.imageNumberTextView)
+        val leftArrowButton: ImageButton = popupView.findViewById(R.id.leftArrowButton)
+        val rightArrowButton: ImageButton = popupView.findViewById(R.id.rightArrowButton)
+        val cancel: ImageView = popupView.findViewById(R.id.cancel)
+        val imageLabelTextView: TextView = popupView.findViewById(R.id.imageLabelTextView)
+
+        val imageUrls = mediaList.map { it.img_url }
+        val imagePagerAdapter = ImagePagerAdapter(context, imageUrls)
+        viewPagerImages.adapter = imagePagerAdapter
+        viewPagerImages.currentItem = currentPosition
+
+        // Update image number text
+        imageNumberTextView.text = "${currentPosition + 1}/$totalImageCount"
+        imageLabelTextView.text = imageLabel
+
+        val dialog = Dialog(context, android.R.style.Theme_Black_NoTitleBar_Fullscreen)
+        dialog.setContentView(popupView)
+        dialog.window?.setBackgroundDrawableResource(R.color.transparentGlass2)
+
+        // Set an OnClickListener to dismiss the popup when clicked outside the image
+        popupView.setOnClickListener {
+            dialog.dismiss()
+        }
+        cancel.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        // Handle arrow button clicks
+        leftArrowButton.setOnClickListener {
+            if (viewPagerImages.currentItem > 0) {
+                viewPagerImages.currentItem -= 1
+                imageNumberTextView.text = "${viewPagerImages.currentItem + 1}/$totalImageCount"
+                imageLabelTextView.text = mediaList[viewPagerImages.currentItem].img_label.toString()
+
+            }
+        }
+
+        rightArrowButton.setOnClickListener {
+            if (viewPagerImages.currentItem < imageUrls.size - 1) {
+                viewPagerImages.currentItem += 1
+                imageNumberTextView.text = "${viewPagerImages.currentItem + 1}/$totalImageCount"
+                imageLabelTextView.text = mediaList[viewPagerImages.currentItem].img_label.toString()
+            }
+        }
+
+        // Update image number when page changes
+        viewPagerImages.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                imageNumberTextView.text = "${position + 1}/$totalImageCount"
+                imageLabelTextView.text =  mediaList[position].img_label.toString()
+
+            }
+        })
+
+        dialog.show()
+    }
+
+
+
+
+
+
+    override fun getItemViewType(position: Int): Int {
+        return if (mediaList[position].imagetype == "Video") TYPE_VIDEO else TYPE_IMAGE
+    }
+
+    override fun getItemCount(): Int {
+        return mediaList.size
+    }
+}

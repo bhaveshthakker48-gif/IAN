@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+android:padding="@dimen/_5sdp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/shadow1"
+        android:background="@drawable/event_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:padding="0dp"
+        android:visibility="visible">
+
+        <!--            <RelativeLayout-->
+        <!--                android:id="@+id/relative_layout1"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_alignParentTop="true"-->
+        <!--                android:layout_marginTop="0dp"-->
+        <!--                android:background="@color/white"-->
+        <!--                android:padding="4dp">-->
+
+
+
+
+
+        <TextView
+            android:id="@+id/topicdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="left|center_vertical"
+            android:text="Event start date - end date "
+            android:textColor="#6A6565"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topicdate"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="left|center_vertical"
+            android:singleLine="false"
+            android:text="Event Name"
+            android:textColor="#323336"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            app:cardBackgroundColor="#F8F9FC"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:id="@+id/speaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eventname"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="left|center_vertical"
+                android:text="Venue : name  "
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/vector"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/voting"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/property_imag2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/offset"
+        android:layout_marginTop="2dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/property_image2"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/event_circle_varient"
+        android:visibility="visible" />
+</RelativeLayout>

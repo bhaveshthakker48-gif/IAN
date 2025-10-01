@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Activity.RepliesActivity">
+
+    <ImageView
+        android:id="@+id/arrowImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/arrow_circle_right_light"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Replies"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/arrowImageView"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="comment"
+        android:layout_below="@id/arrowImageView"
+        android:layout_marginTop="40dp"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"/>
+
+
+    <ImageView
+        android:id="@+id/replyarrow1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/comment"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/corner_up_right"/>
+
+    <TextView
+        android:id="@+id/repliestext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Replies"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/comment"
+        android:layout_toRightOf="@id/replyarrow1"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/repliestext"
+        android:id="@+id/recyclerview_replychats"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/noReplyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/repliestext"
+android:layout_centerInParent="true"
+        android:text="No reply for this comment"
+        android:textSize="14dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/layout_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/editTextChats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:textSize="12dp"
+            android:layout_marginRight="60dp"
+            android:hint="Enter your text here ..."
+            android:textColor="@color/black"
+            android:textColorHint="#685F5F"
+            android:visibility="gone"
+            android:background="@drawable/edittext_chats"
+            tools:ignore="NotSibling" />
+        <ImageView
+            android:id="@+id/sendButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/editTextChats"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            android:src="@drawable/outline_near_me_24"
+            android:text="Send"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+</RelativeLayout>

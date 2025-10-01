@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootlayout"
+    android:focusableInTouchMode="true"
+    android:clickable="true"                        
+    android:background="@color/white"
+    tools:context=".Activity.MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+
+
+            <ImageView
+                android:id="@+id/backbutton"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/vector__5_" />
+
+            <TextView
+                android:id="@+id/commeteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="@android:color/black"
+                android:textSize="26dp"
+                android:visibility="visible"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/backbutton"
+                android:layout_marginStart="18dp"
+                android:layout_centerVertical="true"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@raw/title"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="3dp"
+                android:scaleType="fitStart"
+                android:layout_marginBottom="3dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:clipToOutline="true"
+        >
+        <RelativeLayout
+                android:id="@+id/frame2"
+                android:layout_width="match_parent"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+                <!-- Login as BNA member text -->
+            <TextView
+                    android:id="@+id/textLoginAsMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_as_bna"
+                android:gravity="center"
+                    android:textAppearance="@style/login_as_bna"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="18sp"
+                android:textColor="@android:color/black"
+                    android:layout_marginTop="10dp"/>
+
+                <!-- Member Number input -->
+                <EditText
+                    android:id="@+id/editTextMemberNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_9sdp"
+                    android:singleLine="true"
+                    android:background="@drawable/login_bg"
+                    android:hint="Member Number"
+                    android:textColorHint="#5B5B5C"
+                    android:textColor="@color/black"
+                    android:onClick="onClick"
+                    android:inputType="textCapCharacters"
+
+                    android:textAppearance="@style/username"
+                    android:layout_below="@id/textLoginAsMember"
+                    android:layout_marginTop="49dp"
+                    tools:ignore="OnClick" />
+                <!-- Email or Phone Number input -->
+            <EditText
+                android:singleLine="true"
+                android:id="@+id/editTextEmailOrPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_9sdp"
+                android:background="@drawable/login_bg"
+                android:hint="Email or Phone Number"
+                android:textColorHint="#5B5B5C"
+                android:textColor="@color/black"
+                android:onClick="onClick"
+                android:inputType="textNoSuggestions|text"
+                android:textAppearance="@style/email"
+                android:layout_below="@id/editTextMemberNo"
+                android:layout_marginTop="49dp"
+                tools:ignore="OnClick" />
+
+            <CheckBox
+                android:id="@+id/keepMeLoggedInCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/editTextEmailOrPhone"
+                android:layout_marginTop="28dp"
+                android:checked="true"
+                android:textSize="13sp"
+
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
+                android:text="Keep me logged in"/>
+
+                <!-- Login Button -->
+                <TextView
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:padding="@dimen/_6sdp"
+                    android:id="@+id/loginButton"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_below="@id/keepMeLoggedInCheckBox"
+                    android:layout_marginTop="40dp"
+
+                    />
+            </RelativeLayout>
+    </LinearLayout>
+    </RelativeLayout>

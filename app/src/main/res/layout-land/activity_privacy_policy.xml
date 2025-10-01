@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Activity.PrivacyPolicyActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="15dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_privacy"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backbutton_privacypolicy"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/vector__5_"
+                android:layout_marginStart="10dp"
+
+                />
+            <TextView
+                android:id="@+id/commeteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About US"
+                android:textColor="@android:color/black"
+                android:textSize="17dp"
+                android:visibility="visible"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/backbutton_privacypolicy"
+                android:layout_marginStart="18dp"
+                android:layout_centerVertical="true"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView"
+                android:layout_width="@dimen/_175sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="1dp"
+                android:src="@raw/title"
+                />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cardViewAboutBNA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About BNA"
+                android:textSize="18dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#2E333A"
+                android:padding="16dp"/>
+            <ImageView
+                android:id="@+id/lineUnderCard1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/cardViewAboutBNA"
+                android:background="#F2F2F2"
+                />
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="0dp"
+                android:layout_centerInParent="true"
+                android:contentDescription="Back Button"
+                android:padding="10dp"
+                android:src="@drawable/side_a__1_" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/card1"
+            android:layout_below="@id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cardViewAboutBNAApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About BNA App"
+                android:textSize="18dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#2E333A"
+                android:padding="16dp"/>
+            <ImageView
+                android:id="@+id/lineUnderCard2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/cardViewAboutBNAApp"
+                android:background="#F2F2F2"
+                />
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/btnBack1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="0dp"
+                android:contentDescription="Back Button"
+                android:padding="10dp"
+                android:src="@drawable/side_a__1_" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/card2"
+            android:layout_below="@id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/AppHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="App Help"
+                android:textSize="18dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#2E333A"
+                android:padding="16dp"/>
+            <ImageView
+                android:id="@+id/lineUnderCard3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/AppHelp"
+                android:background="#F2F2F2"
+                />
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/btnBack3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="0dp"
+                android:contentDescription="Back Button"
+                android:padding="10dp"
+                android:src="@drawable/side_a__1_" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/card3"
+            android:layout_below="@id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cardViewShareApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share App"
+                android:textSize="18dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#2E333A"
+                android:padding="16dp"/>
+            <ImageView
+                android:id="@+id/lineUnderCard4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/cardViewShareApp"
+                android:background="#F2F2F2"
+                />
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/btnBack4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="0dp"
+                android:contentDescription="Back Button"
+                android:padding="10dp"
+                android:src="@drawable/side_a__1_" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/card4"
+            android:layout_below="@id/card3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cardViewprivacyApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"
+                android:textSize="18dp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#2E333A"
+                android:padding="16dp"/>
+            <ImageView
+                android:id="@+id/lineUnderCard5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/cardViewprivacyApp"
+                android:background="#F2F2F2"
+                />
+            <!-- Back Button -->
+            <ImageView
+                android:id="@+id/btnBack5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="0dp"
+                android:contentDescription="Back Button"
+                android:padding="10dp"
+                android:src="@drawable/side_a__1_" />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>

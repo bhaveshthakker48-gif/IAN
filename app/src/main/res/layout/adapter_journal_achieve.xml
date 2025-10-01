@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:id="@+id/cardView"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/_5sdp"
+    app:strokeColor="@color/dashline"
+    app:strokeWidth="2dp"
+    app:cardBackgroundColor="@color/white"
+    android:layout_margin="@dimen/_5sdp"
+
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:padding="@dimen/_7sdp"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/MaterialCardView_image"
+        android:layout_width="@dimen/_100sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_height="@dimen/_150sdp"
+        tools:ignore="MissingConstraints" >
+        <org.bombayneurosciences.bna_2023.CustomPageUtils.PDFView
+            android:id="@+id/pdfView"
+
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_150sdp"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayout"
+
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/_120sdp"
+        app:layout_constraintTop_toTopOf="@+id/MaterialCardView_image"
+        app:layout_constraintStart_toEndOf="@+id/MaterialCardView_image"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:textColor="@color/dark_red"
+            android:textSize="@dimen/_12ssp"
+            android:text="April 2024"
+            android:id="@+id/TextView_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginTop="@dimen/_20sdp"
+            android:id="@+id/arrowcircle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:src="@drawable/ph_arrow_circle_right_light__1_"
+
+            app:layout_constraintEnd_toEndOf="@+id/ConstraintLayout"
+
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/innerConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/TextView_date">
+
+            <!-- Add other views inside this inner ConstraintLayout as needed -->
+
+            <TextView
+
+                android:textColor="@color/black"
+                android:id="@+id/TextView_vol"
+                android:text="Vol.1 | issue1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+           <!-- <View
+                android:background="@color/black"
+                android:id="@+id/view"
+                app:layout_constraintTop_toTopOf="@+id/TextView_vol"
+                app:layout_constraintStart_toEndOf="@+id/TextView_vol"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/_10sdp"/>
+
+            <TextView
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="@+id/view"
+                app:layout_constraintStart_toEndOf="@+id/view"
+                android:id="@+id/TextView_issue"
+                android:text="Vol."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

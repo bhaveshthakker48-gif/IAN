@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "417636261563",
+    "project_id": "bnafirebase",
+    "storage_bucket": "bnafirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417636261563:android:fbb8d1ce99bf0f1e09139e",
+        "android_client_info": {
+          "package_name": "org.bombayneurosciences.bna_2023"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTQMTizns7CsmIzBBook-OME5BkYoUf-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

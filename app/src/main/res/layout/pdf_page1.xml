@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:layout_margin="@dimen/_5sdp"
+        android:id="@+id/pdfImageView"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        android:layout_height="match_parent"
+        tools:ignore="MissingClass" />
+
+ <!--   <org.bombayneurosciences.bna_2023.PageCurlView
+        android:id="@+id/pageCurlView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>-->
+</FrameLayout>

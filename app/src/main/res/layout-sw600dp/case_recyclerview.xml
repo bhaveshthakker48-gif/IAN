@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardjournal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="9dp">
+
+        <RelativeLayout
+            android:id="@+id/case_layout"
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow">
+
+            <TextView
+                android:id="@+id/case_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:textColor="#433737"
+                android:text="Case no: 1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="left|center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/case_no"
+                android:singleLine="false"
+
+                android:textColor="@color/black"
+                android:text="Title"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="left|center_vertical"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/name_designation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:layout_below="@id/title"
+                android:textColor="#433737"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="left|center_vertical"
+                android:fontFamily="@font/poppins_medium"
+                android:text="name,Designation"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:id="@+id/datevalidation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="false"
+                android:layout_below="@id/name_designation"
+                android:textColor="#433737"
+                android:text="Valid upto:15-12-2023"
+                android:textSize="18sp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginEnd="20dp"
+                android:gravity="left|center_vertical"
+                android:layout_marginBottom="10dp"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

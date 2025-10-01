@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardevent"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="9dp">
+
+        <RelativeLayout
+            android:id="@+id/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/days_shadow"
+            >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="10dp"
+                android:text="Title Name"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:lineSpacingExtra="-9sp"
+                android:gravity="center_horizontal|top" />
+
+            <TextView
+                android:id="@+id/topicdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="Event start time - end time "
+                android:fontFamily="@font/poppins_medium"
+                android:layout_below="@id/title"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:gravity="center_horizontal|top" />
+            <TextView
+                android:id="@+id/speaker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="Speaker  "
+                android:fontFamily="@font/poppins_medium"
+                android:layout_below="@id/topicdate"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:gravity="center_horizontal|top" />
+            <ImageView
+                android:id="@+id/vector"
+                android:layout_gravity="center"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/vector"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

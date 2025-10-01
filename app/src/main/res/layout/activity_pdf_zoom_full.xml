@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:background="@color/white"
+        app:cardElevation="5dp"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/layout_privacy"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+
+
+            <ImageView
+                android:id="@+id/backbutton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_circle_right_light"
+                android:layout_marginStart="10dp"
+                />
+            <TextView
+                android:id="@+id/eventheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About BNA"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="20dp"
+                android:singleLine="true"
+                android:layout_marginEnd="20dp"
+                android:visibility="visible"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/backbutton"
+                android:layout_marginStart="18dp"
+                android:layout_centerVertical="true"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="3dp"
+                android:scaleType="fitStart"
+                android:layout_marginBottom="3dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:strokeColor="#B30013"
+        app:cardElevation="@dimen/_5sdp"
+        app:strokeWidth="@dimen/_1sdp"
+        app:cardBackgroundColor="@color/white"
+
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/journal_menu"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/journal_menu"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_9sdp"
+            />
+</RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>
+   <!-- <ImageView
+        android:id="@+id/journal_menu"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/journal_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_9sdp"
+        />
+-->
+
+
+</LinearLayout>

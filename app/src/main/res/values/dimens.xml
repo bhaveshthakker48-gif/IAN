@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- Example of using ssp for text sizes -->
+    <dimen name="notification_title_text_size">@dimen/_16ssp</dimen>
+    <dimen name="notification_description_text_size">@dimen/_14ssp</dimen>
+    <dimen name="view_all_text_size">@dimen/_10ssp</dimen>
+    <dimen name="horizontal_spacing">@dimen/_3sdp</dimen>
+    <dimen name="margin_80dp">80dp</dimen>
+    <dimen name="margin_30dp">60dp</dimen>
+    <dimen name="extra_bottom_space">30dp</dimen>
+    <dimen name="your_dotted_line_width">2dp</dimen>
+    <dimen name="your_dotted_line_height">1dp</dimen>
+    <dimen name="dot_radius">4dp</dimen>
+
+    <dimen name="card_corner_radius">@dimen/_7sdp</dimen>
+
+    <dimen name="_66sdp">66dp</dimen>
+        <dimen name="_14sdp">14dp</dimen>
+        <dimen name="_15sdp">15dp</dimen>
+        <dimen name="_35sdp">35dp</dimen>
+        <dimen name="_20sdp">20dp</dimen>
+        <dimen name="_220sdp">220dp</dimen>
+        <dimen name="_90sdp">90dp</dimen>
+        <dimen name="_7sdp">7dp</dimen>
+        <dimen name="_10sdp">10dp</dimen>
+        <dimen name="_206sdp">206dp</dimen>
+        <dimen name="_37sdp">37dp</dimen>
+        <dimen name="_30sdp">30dp</dimen>
+        <dimen name="_5sdp">5dp</dimen>
+    <dimen name="dimen_5dp">5dp</dimen>
+    <dimen name="dimen_0dp">0dp</dimen>
+    <dimen name="dimen_7dp">7dp</dimen>
+    <dimen name="dimen_10dp">10dp</dimen>
+    <dimen name="dimen_15dp">15dp</dimen>
+    <dimen name="dimen_18dp">18dp</dimen>
+    <dimen name="dimen_20dp">20dp</dimen>
+    <dimen name="dimen_22dp">22dp</dimen>
+    <dimen name="dimen_25dp">25dp</dimen>
+    <dimen name="dimen_30dp">30dp</dimen>
+    <dimen name="dimen_35dp">35dp</dimen>
+    <dimen name="dimen_40dp">40dp</dimen>
+    <dimen name="dimen_45dp">45dp</dimen>
+    <dimen name="dimen_50dp">50dp</dimen>
+
+    </resources>
+

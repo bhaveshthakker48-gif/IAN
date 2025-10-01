@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:padding="16dp">
+<androidx.cardview.widget.CardView
+    android:id="@+id/OptionA"
+    app:cardBackgroundColor="@color/white"
+    android:background="@color/white"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <!-- Option A -->
+    <ImageView
+        android:id="@+id/optionImageA"
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:src="@drawable/aletterblackhollow"
+        />
+    <TextView
+        android:id="@+id/optionTextA"
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/optionImageA"
+        android:text="Option A"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="90dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+</androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/OptionB"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/white"
+        android:layout_height="60dp"
+        android:layout_below="@id/OptionA">
+    <!-- Option A -->
+    <ImageView
+        android:id="@+id/optionImageB"
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bletterblackhollow"
+        />
+
+    <TextView
+        android:id="@+id/optionTextB"
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:text="Option B"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="90dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+</androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:background="@color/white"
+        android:id="@+id/OptionC"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/OptionB">
+        <!-- Option A -->
+        <ImageView
+            android:id="@+id/optionImageC"
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cletterblackhollow"
+            />
+
+        <TextView
+            android:id="@+id/optionTextC"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option C"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="90dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/OptionD"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:background="@color/white"
+        app:cardBackgroundColor="@color/white"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/OptionC">
+        <!-- Option A -->
+        <ImageView
+            android:id="@+id/optionImageD"
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dletterblackhollow"
+            />
+
+        <TextView
+            android:id="@+id/optionTextD"
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:text="Option D"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="90dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/OptionE"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/OptionD">
+        <!-- Option A -->
+        <ImageView
+            android:id="@+id/optionImageE"
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/eletterblackhollow"
+            />
+
+        <TextView
+            android:id="@+id/optionTextE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option C"
+            android:background="@color/white"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="90dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+</androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textSize="20sp"
+        android:paddingTop="10dp"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:background="@drawable/login_button"
+        android:layout_below="@id/OptionE"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/imgvoting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/submitButton"
+        android:src="@drawable/image_voting"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgvoting"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_below="@id/submitButton"
+        android:src="@drawable/ph_video_duotone"/>
+</RelativeLayout>

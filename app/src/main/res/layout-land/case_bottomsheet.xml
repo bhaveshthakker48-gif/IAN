@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<FrameLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:background="@drawable/bottom_sheet_dialog_background"-->
+
+<!--    android:layout_height="wrap_content">-->
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+          android:background="@color/white"
+        android:layout_height="wrap_content">
+
+
+        <!-- Image Icon ImageView -->
+        <ImageView
+            android:id="@+id/imageIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/imgchats"/>
+
+        <!-- Downward Arrow ImageView -->
+        <ImageView
+            android:id="@+id/down"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:onClick="onDownArrowClick"
+            android:layout_marginTop="-25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/down_arrow__2_"/>
+
+        <!-- Radiology Section -->
+        <LinearLayout
+            android:orientation="vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <!-- Radiology TextView -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Radiology"
+                android:layout_marginStart="10dp"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"/>
+
+            <!-- RecyclerView for Radiology Images -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/radiologyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
+
+        </LinearLayout>
+        <!-- Radiology Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <!-- Radiology TextView -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pathology"
+                android:layout_marginStart="10dp"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"/>
+
+            <!-- RecyclerView for Radiology Images -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pathologyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
+
+        </LinearLayout>
+        <!-- Radiology Section -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <!-- Radiology TextView -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Videos"
+                android:layout_marginStart="10dp"
+                android:textSize="15dp"
+                android:textColor="@android:color/black"/>
+
+            <!-- RecyclerView for Radiology Images -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/videoRecyclerView"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
+
+        </LinearLayout>
+</LinearLayout>
+
+    <!--        <LinearLayout-->
+<!--            android:id="@+id/chatscard"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:elevation="16dp"-->
+<!--            android:layout_marginBottom="30dp"-->
+<!--            android:background="@drawable/comment_btn"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/commentsTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Comments"-->
+<!--                android:textStyle="bold"-->
+<!--                android:fontFamily="@font/poppins_medium"-->
+<!--                android:textSize="15dp"-->
+<!--                android:textColor="#B30013"/>-->
+
+<!--            &lt;!&ndash; Comment Icon ImageView &ndash;&gt;-->
+<!--            <ImageView-->
+<!--                android:id="@+id/commentIcon"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:src="@drawable/comments_outline"/>-->
+<!--        </LinearLayout>-->
+
+<!--</FrameLayout>-->

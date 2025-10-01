@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    tools:context=".Activity.chatsActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Your Bottom Sheet Layout -->
+        <RelativeLayout
+            android:id="@+id/bottomSheetLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            android:background="@android:color/white"
+            android:elevation="8dp">
+
+            <!-- Arrow ImageView -->
+            <ImageView
+                android:id="@+id/arrowImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/arrow_circle_right_light"/>
+
+            <!-- Comments TextView -->
+            <TextView
+                android:id="@+id/comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Comments"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/arrowImageView"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"/>
+
+            <!-- RecyclerView for chats -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewChats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:layout_below="@id/comments"
+                android:padding="16dp"
+                android:background="@android:color/white" />
+
+        </RelativeLayout>
+
+        <!-- Arrow ImageView, Comments TextView, RecyclerView -->
+        <!-- ... your other UI components ... -->
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Chat input layout at the bottom -->
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/layout_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- EditText for typing messages -->
+        <EditText
+            android:id="@+id/editTextChats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:layout_marginRight="60dp"
+            android:hint="Enter your text here ..."
+            android:textColor="@color/black"
+            android:textColorHint="#685F5F"
+            android:background="@drawable/edittext_chats"
+            tools:ignore="NotSibling" />
+
+        <!-- Send button -->
+        <ImageView
+            android:id="@+id/sendButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/editTextChats"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/outline_near_me_24"
+            android:text="Send"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="14dp"
+        android:background="@color/white"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:scaleType="fitStart"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/heading"
+                />
+
+            <ImageView
+                android:id="@+id/healthicons"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/userprofile"
+                android:clipToOutline="true" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/aims"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_below="@id/card_main"
+        android:background="@drawable/card_shape"
+        >
+        <TextView
+            android:id="@+id/notificationTitle_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="BNA notification"
+            android:layout_margin="@dimen/_3sdp"
+            android:textStyle="bold"
+            android:textAppearance="@style/aims_of_bna_tab"
+            android:layout_marginTop="9dp"/>
+        <TextView
+            android:lineSpacingExtra="4dp"
+            android:id="@+id/notificationDescription_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_3sdp"
+            android:textColor="@color/white"
+            android:maxLines="2"
+            style="@style/maintaining_tab"
+            android:text="BNA notification description"
+            android:textAppearance="@style/maintaining"
+            android:gravity="top"
+            />
+        <!-- <RelativeLayout
+             android:id="@+id/notification"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@id/maintaining"
+             android:layout_marginLeft="20dp"
+             android:layout_marginTop="10dp"
+             >
+             <TextView
+
+                 android:background="@drawable/notification"
+                 android:textAlignment="center"
+                 android:id="@+id/view_all"
+                 android:layout_width="wrap_content"
+
+                 android:layout_height="wrap_content"
+                 android:text="@string/view_all"
+                 android:textColor="@color/teal_700"
+                 android:textAppearance="@style/view_all"
+
+                 />
+         </RelativeLayout>-->
+
+        <TextView
+            android:id="@+id/viewall"
+            android:textSize="10dp"
+            android:textColor="@color/teal_700"
+            android:background="@drawable/notification_bar__2_"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/notificationDescription_des"
+            android:layout_width="@dimen/_100sdp"
+            style="@style/view_all_tab"
+            android:drawablePadding="10dp"
+            android:textAlignment="center"
+            android:layout_height="48dp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        android:layout_below="@id/aims"
+        >
+
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardcommette"
+                            android:layout_margin="10dp"
+                            android:layout_width="@dimen/_70sdp"
+                            android:background="@color/white"
+                            android:layout_height="@dimen/_70sdp"
+                            app:cardCornerRadius="9dp"
+                            app:cardElevation="8dp">
+                            <LinearLayout
+                                android:paddingTop="@dimen/_5sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_7sdp"
+                                android:paddingEnd="@dimen/_7sdp"
+                                android:orientation="vertical"
+                                android:background="@color/white"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:id="@+id/imgCommittee"
+                                    style="@style/dashboard_button_style_tab"
+                                    android:src="@drawable/commette" />
+
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:id="@+id/committee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imgCommittee"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:text="@string/committee"
+                                    android:textAlignment="center"
+                                    android:textAppearance="@style/committee" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardevent"
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="@dimen/_70sdp"
+                            app:cardCornerRadius="9dp"
+                            android:background="@color/white"
+                            android:layout_marginLeft="40dp"
+                            app:cardElevation="8dp">
+                            <LinearLayout
+                                android:paddingTop="@dimen/_5sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:paddingEnd="@dimen/_10sdp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                >
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:id="@+id/imgEvents"
+                                    style="@style/dashboard_button_style_tab"
+                                    android:src="@drawable/events" />
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:id="@+id/Event"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Events"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textAlignment="center"
+                                    android:textAppearance="@style/committee"
+                                    android:layout_below="@id/imgEvents"
+                                    />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardcasemonth"
+                            android:layout_width="@dimen/_70sdp"
+                            android:background="@color/white"
+                            android:layout_height="@dimen/_70sdp"
+                            app:cardCornerRadius="9dp"
+                            app:cardElevation="8dp">
+                            <LinearLayout
+                                android:paddingTop="@dimen/_5sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:paddingEnd="@dimen/_10sdp"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                >
+
+                                <ImageView
+
+                                    android:id="@+id/imgcase"
+                                    style="@style/dashboard_button_style_tab"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/month" />
+
+                                <TextView
+
+                                    android:id="@+id/txtcase"
+                                    android:layout_gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imgcase"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:gravity="center"
+                                    android:text="@string/month"
+                                    android:textAppearance="@style/committee" />
+
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardjournal_mainActivity"
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="@dimen/_70sdp"
+                            app:cardCornerRadius="9dp"
+                            android:background="@color/white"
+                            android:layout_marginLeft="40dp"
+                            app:cardElevation="8dp">
+                            <LinearLayout
+                                android:paddingTop="@dimen/_5sdp"
+                                android:paddingBottom="@dimen/_5sdp"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:paddingEnd="@dimen/_10sdp"
+
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                >
+                                <ImageView
+                                    android:layout_gravity="center"
+                                    android:id="@+id/imgjournal"
+                                    style="@style/dashboard_button_style_tab"
+                                    android:src="@drawable/journal" />
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Journal"
+                                    android:textAlignment="center"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textAppearance="@style/committee"
+
+                                    />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content">
+                    <androidx.cardview.widget.CardView
+
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        app:cardCornerRadius="9dp"
+                        android:elevation="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        app:cardElevation="8dp">
+                        <LinearLayout
+                            android:paddingTop="@dimen/_5sdp"
+                            android:paddingBottom="@dimen/_5sdp"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:paddingEnd="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            android:id="@+id/cardprivacyMainactivity"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:background="@color/white"
+                            android:layout_height="match_parent"
+                            >
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:id="@+id/imgquiz"
+                                style="@style/dashboard_button_style_tab"
+                                android:src="@drawable/about_us" />
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:id="@+id/Quiz"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/imgquiz"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/privacy"
+                                android:textAppearance="@style/committee" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

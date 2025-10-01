@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.JournalActiivtyyy">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backbutton"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/vector__5_"
+                android:layout_marginStart="10dp"
+
+                />
+            <TextView
+                android:id="@+id/eventheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Journal"
+                android:textColor="@android:color/black"
+                android:textSize="17dp"
+                android:singleLine="true"
+                android:layout_marginEnd="20dp"
+                android:visibility="visible"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/backbutton"
+                android:layout_marginStart="18dp"
+                android:layout_centerVertical="true"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView"
+                android:layout_width="@dimen/_175sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="1dp"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_below="@id/cardview"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:background="@color/white">-->
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:id="@+id/cardjournal"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_margin="5dp"-->
+    <!--            app:cardCornerRadius="10dp"-->
+    <!--            app:cardElevation="9dp">-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="90dp"-->
+    <!--                android:background="@drawable/shadow">-->
+
+    <!--                &lt;!&ndash; Title TextView &ndash;&gt;-->
+    <!--                <TextView-->
+    <!--                    android:id="@+id/title"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginTop="15dp"-->
+    <!--                    android:layout_marginLeft="20dp"-->
+    <!--                    android:text="TITLE NAME"-->
+    <!--                    android:fontFamily="@font/poppins_medium"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    android:textSize="15sp"-->
+    <!--                    android:lineSpacingExtra="-9sp"-->
+    <!--                    android:gravity="center_horizontal|top"-->
+    <!--                    />-->
+
+    <!--                &lt;!&ndash; Author TextView &ndash;&gt;-->
+    <!--                <TextView-->
+    <!--                    android:id="@+id/author"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_below="@id/title"-->
+    <!--                    android:layout_marginTop="1dp"-->
+    <!--                    android:layout_marginLeft="20dp"-->
+    <!--                    android:text="AUTHOR NAME"-->
+    <!--                    android:textSize="12sp"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    android:fontFamily="@font/poppins_medium"-->
+    <!--                    android:gravity="center_horizontal|top"-->
+    <!--                    />-->
+    <!--                <ImageView-->
+    <!--                    android:id="@+id/arrowcircle"-->
+    <!--                    android:layout_gravity="center"-->
+    <!--                    android:layout_marginLeft="300dp"-->
+    <!--                    android:layout_marginTop="25dp"-->
+    <!--                    android:src="@drawable/arrowcircle"-->
+    <!--                    android:layout_width="40dp"-->
+    <!--                    android:layout_height="40dp"-->
+
+    <!--                     />-->
+    <!--            </RelativeLayout>-->
+    <!--        </androidx.cardview.widget.CardView>-->
+
+
+    <!--    </RelativeLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cardview"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/no_data_text_view_jornalactiivtyyyy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Data Available"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

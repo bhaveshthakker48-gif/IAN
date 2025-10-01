@@ -1,0 +1,31 @@
+package org.bombayneurosciences.bna_2023.Model.Voting
+
+data class Data(
+    val answer1: String,
+    val answer2: String,
+    val answer3: String,
+    val answer4: String,
+    val answer5: String,
+    val cd_start_time: Any,
+    val cd_stop: Int,
+    val correct_answer: String,
+    val create_date: String,
+    val event_id: Int,
+    val image1: String,
+    val image2: String,
+    val image3: String,
+    val image4: String,
+    val image5: String,
+    val is_active: Int,
+    val is_cd_started: Int,
+    val is_dummy: Int,
+    val is_voted: Int,
+    val modify_date: Any,
+    val question: String,
+    val question_id: Int,
+    val question_timing: Int,
+    val question_type: String,
+    val session_id: Int,
+    val topic_id: Int,
+    val video: String
+)

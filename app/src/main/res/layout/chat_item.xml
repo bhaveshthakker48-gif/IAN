@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        app:cardUseCompatPadding="true"
+        android:id="@+id/receive_cardView"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="7dp"
+        android:layout_marginEnd="60dp"
+        android:background="@color/white1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:id="@+id/commFromTextView"
+                    android:singleLine="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+
+                android:gravity="left|center_vertical"
+                    android:textStyle="bold"
+
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:textSize="13dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/commenttype"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:gravity="left|center_vertical"
+
+                    android:textColor="@color/red1"
+                    android:layout_toRightOf="@id/commFromTextView"/>
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/createdAtTextView"
+                android:layout_width="wrap_content"
+                android:text="date and time "
+                android:layout_marginStart="5dp"
+                android:gravity="left|center_vertical"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textSize="12dp"
+                android:textColor="@android:color/darker_gray"/>
+
+            <TextView
+                android:singleLine="false"
+                android:textColor="@color/black"
+                android:id="@+id/commentTextView"
+                android:layout_marginEnd="5dp"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Comment"
+                android:gravity="left|center_vertical"
+
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"/>
+
+
+            <RelativeLayout
+                android:id="@+id/replybutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/repliimg"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/corner_up_right"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"/>
+                <TextView
+                    android:id="@+id/replyCountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:textColor="#B30013"
+                    android:layout_toRightOf="@id/repliimg"
+                    android:text="1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="3dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/replytext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:visibility="gone"
+                    android:text="Replies"
+                    android:layout_marginStart="15dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="#B30013"
+                    android:layout_toRightOf="@id/replyCountTextView"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/send_cardView"
+        app:cardUseCompatPadding="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        app:cardCornerRadius="9dp"
+        android:background="@color/white1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/commFromTextView1"
+                android:layout_width="30dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/you_lable"
+                android:layout_marginEnd="5dp"
+                />
+            <TextView
+                android:id="@+id/createdAtTextView1"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="date and time "
+                android:layout_marginStart="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:textSize="12dp"
+                android:gravity="left|center_vertical"
+
+                android:textColor="@android:color/darker_gray"/>
+            <TextView
+                android:singleLine="false"
+                android:textColor="@color/black"
+                android:id="@+id/commentTextView1"
+                android:layout_marginEnd="5dp"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:gravity="left|center_vertical"
+
+                android:text="Comment"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"/>
+            <RelativeLayout
+                android:id="@+id/replybutton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/repliimg1"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/corner_up_right"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="5dp"/>
+                <TextView
+                    android:id="@+id/replyCountTextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:textColor="#B30013"
+                    android:layout_toRightOf="@id/repliimg1"
+                    android:text="1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="3dp"
+                    android:visibility="gone" />
+                <TextView
+                    android:id="@+id/replytext1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:visibility="gone"
+                    android:text="Replies"
+                    android:layout_marginStart="15dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="#B30013"
+                    android:layout_toRightOf="@id/repliimg1"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/noCommentsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No comments"
+        android:visibility="gone"
+    android:layout_gravity="center"
+    android:textColor="@color/black"
+    android:textSize="16dp"/>
+</LinearLayout>
+
+
+
+

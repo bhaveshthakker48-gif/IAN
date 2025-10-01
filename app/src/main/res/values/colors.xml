@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FE080D</color>
+    <color name="red1">#DF1F23</color>
+    <color name="gray">#FAF6F6</color>
+    <color name="green">#30C135</color>
+    <color name="white1">#9CB1B1BA</color>
+    <color name="black1">#CC0B0B0C</color>
+    <color name="red">#DC0707</color>
+    <color name="dark_red">#B30013
+    </color>
+
+    <color name="dashline">#E7E7EA</color>
+    <color name="dashline1">#D3D6DD</color>
+    <color name="editTextColorNight">#323336</color>
+    <color name="loginbtn">#80B30013</color>
+    <color name="logintext">#FEFEFF</color>
+
+    <!-- res/values-night/colors.xml -->
+    <color name="dark_blue">#223263</color>
+    <color name="red2">#B30013</color>
+    <color name="your_custom_color">#FF0000</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="transparentGlass">#80BFE1FF</color> <!-- Light blue with a glass-like effect -->
+    <color name="your_red_color">#B30013</color>
+    <color name="your_original_color">#80B30013</color>
+
+    <color name="transparentGlass1">#80BFE1FF</color> <!-- Light blue with a glass-like effect -->
+    <color name="transparentGlass2">#D2383737</color> <!-- Light gray with a glass-like effect -->
+
+    <color name="transparentBlack">#00000000</color> <!-- Fully transparent black -->
+
+
+    <color name="annualMeetingColor">#FF0000</color> <!-- Red color for Annual Meeting -->
+        <color name="monthlyMeetingColor">#000000</color> <!-- Black color for Monthly Meeting -->
+
+
+</resources>

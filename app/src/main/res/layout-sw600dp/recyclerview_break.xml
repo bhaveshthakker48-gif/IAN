@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="15dp"
+    android:padding="@dimen/_6sdp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/breaks"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginEnd="10dp"
+    app:cardElevation="8dp"
+    android:background="#A6323336"
+    app:cardCornerRadius="9dp"
+    android:clickable="false"
+   >
+
+    <TextView
+        android:id="@+id/breakname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:textStyle="bold"
+        android:layout_marginLeft="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:text=" Title"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+       />
+
+    <TextView
+        android:id="@+id/brektime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginLeft="0dp"
+        android:clickable="false"
+        android:layout_gravity="center"
+        android:text=" start time - end time "
+        android:fontFamily="@font/poppins"
+        android:layout_below="@id/sessionname"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"
+      />
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>

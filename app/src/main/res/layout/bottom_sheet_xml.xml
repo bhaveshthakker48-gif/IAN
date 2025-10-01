@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="@dimen/_6sdp"
+    android:background="@drawable/bottom_sheet_dialog_background"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Person Name TextView -->
+        <TextView
+            style="@style/BottomPersonName"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Person Name"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="left|center_vertical"
+            android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:id="@+id/textView_person_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Email Section -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <!-- Email ImageView -->
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/email1"/>
+
+            <!-- Email TextView -->
+            <TextView
+                android:layout_margin="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="user@example.com"
+                android:id="@+id/textViewEmail"
+                android:textSize="16dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="left|center_vertical"
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <!-- Email ImageView -->
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/logout__1_"/>
+
+            <!-- Email TextView -->
+            <TextView
+                android:layout_margin="@dimen/dimen_10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:hint="Logout"
+                android:text="Logout"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:id="@+id/textViewlogout"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:gravity="left|center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

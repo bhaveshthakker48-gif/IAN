@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".JournalNewFolder.ArchivesActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+
+
+            <ImageView
+                android:id="@+id/backbutton_case"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/left_rd_errow"
+                android:layout_marginStart="10dp"
+                />
+            <TextView
+                android:id="@+id/commeteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Archives "
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:visibility="gone"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/backbutton_case"
+                android:layout_marginStart="18dp"
+                android:layout_centerVertical="true"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:src="@raw/title"
+                android:visibility="invisible"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="3dp"
+                android:scaleType="fitStart"
+                android:layout_marginBottom="3dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/cardview"
+        android:visibility="visible"
+        />
+
+
+
+        <ImageView
+            android:id="@+id/journal_menuu"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/journal_menu"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp" />
+        <ImageView
+            android:id="@+id/journal_menuu1"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/archive"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:visibility="visible"
+            android:layout_marginBottom="15dp"
+             />
+
+    <ImageView
+        android:id="@+id/full_screen_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/left_rd_errow"
+        android:visibility="visible"
+        android:layout_marginStart="5dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+
+</RelativeLayout>

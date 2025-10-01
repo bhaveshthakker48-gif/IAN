@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.VotingActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backbutton"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/vector__5_"
+            android:layout_marginStart="10dp"
+
+            />
+        <TextView
+            android:id="@+id/eventheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Events"
+            android:textColor="@android:color/black"
+            android:textSize="17dp"
+            android:visibility="visible"
+            android:fontFamily="@font/poppins_medium"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:layout_marginEnd="20dp"
+            android:layout_toEndOf="@id/backbutton"
+            android:layout_marginStart="18dp"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:id="@+id/gifImageView"
+            android:layout_width="@dimen/_175sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:src="@drawable/heading"
+            android:layout_marginLeft="30dp"
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="1dp"
+            />
+
+        <ImageView
+
+                android:layout_alignParentRight="true"
+                android:id="@+id/refreshbutton"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:src="@drawable/refreshbtn"
+                android:clipToOutline="true"
+                android:onClick="onRefreshButtonClick"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="10dp"
+                tools:ignore="OnClick" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardview"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:singleLine="false"
+        android:textColor="@color/black"
+        android:text="Q:What is this question?"
+        android:textSize="18dp" />
+    <ImageView
+        android:id="@+id/imgvoting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/questionTextView"
+        android:src="@drawable/image_voting"/>
+    <ImageView
+        android:id="@+id/video_voting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgvoting"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/questionTextView"
+        android:src="@drawable/ph_video_duotone"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/OptionA"
+        app:cardBackgroundColor="@color/white"
+        android:visibility="gone"
+        android:background="@drawable/unselected_option_background"
+        android:layout_marginStart="10dp"
+        android:clickable="true"
+        app:cardCornerRadius="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/imgvoting"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <!-- Option A -->
+        <ImageView
+            android:id="@+id/optionImageA_votingActivity"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="35dp"
+            android:src="@drawable/aletterblackhollow"
+            />
+        <TextView
+            android:id="@+id/optionTextA"
+            android:layout_width="wrap_content"
+            android:singleLine="false"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/optionImageA"
+            android:text="Option A"
+            android:textAlignment="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="90dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/OptionB"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:background="@drawable/unselected_option_background"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_height="45dp"
+        android:layout_below="@id/OptionA">
+        <!-- Option A -->
+        <ImageView
+            android:id="@+id/optionImageB"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="35dp"
+            android:src="@drawable/bletterblackhollow"
+            />
+        <TextView
+            android:id="@+id/optionTextB"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:text="Option B"
+            android:singleLine="false"
+          android:textAlignment="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="90dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:background="@drawable/unselected_option_background"
+        android:visibility="gone"
+        android:id="@+id/OptionC"
+        app:cardCornerRadius="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/OptionB">
+        <!-- Option A -->
+        <ImageView
+            android:id="@+id/optionImageC"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="35dp"
+            android:src="@drawable/cletterblackhollow"
+            />
+
+        <TextView
+            android:id="@+id/optionTextC"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option C"
+            android:textAlignment="center"
+            android:singleLine="false"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="90dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/OptionD_voting"
+        app:cardCornerRadius="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/unselected_option_background"
+        app:cardBackgroundColor="@color/white"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/OptionC">
+        <!-- Option A -->
+        <ImageView
+            android:id="@+id/optionImageD"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="35dp"
+            android:src="@drawable/dletterblackhollow"
+            />
+
+        <TextView
+            android:id="@+id/optionTextD"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:text="Option D"
+            android:singleLine="false"
+            android:textAlignment="center"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="90dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        app:cardCornerRadius="5dp"
+        android:id="@+id/OptionE_voting"
+        android:layout_width="match_parent"
+        android:background="@drawable/unselected_option_background"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="45dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/OptionD_voting">
+        <!-- Option A -->
+        <ImageView
+            android:id="@+id/optionImageE"
+            android:layout_width="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="35dp"
+            android:src="@drawable/eletterblackhollow"
+            />
+
+        <TextView
+            android:id="@+id/optionTextE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option E"
+            android:singleLine="false"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="12dp"
+            android:textAlignment="center"
+            android:layout_marginLeft="90dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Submit"
+        android:textSize="20dp"
+        android:paddingTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:background="@drawable/login_button"
+        android:layout_below="@id/OptionE_voting"
+        android:layout_marginTop="12dp" />
+
+
+    <TextView
+        android:id="@+id/no_question_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text=" Currently no active question available"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:visibility="gone" />
+</RelativeLayout>

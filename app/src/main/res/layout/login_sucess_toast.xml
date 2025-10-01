@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/custom_toast_layout"
+    android:layout_height="wrap_content"
+    android:clipToOutline="false"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/toast_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <!-- ImageView -->
+            <ImageView
+                android:id="@+id/lineview"
+                android:layout_width="4dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/toast_line"/>
+
+            <!-- Logout Text -->
+            <TextView
+                android:id="@+id/CustomToastnotificationTitle"
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:layout_height="wrap_content"
+                android:text="Login Successful "
+                android:textSize="18dp"
+                android:fontFamily="@font/poppins"
+                android:singleLine="false"
+                android:gravity="left|center_vertical"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/imgCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_vertical"
+
+            android:src="@drawable/t_pri_cross"
+            android:clickable="true"
+            android:onClick="cancelToast" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

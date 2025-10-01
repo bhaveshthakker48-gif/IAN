@@ -1,0 +1,163 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+
+}
+android {
+    namespace 'org.bombayneurosciences.bna_2023'
+    compileSdk 35
+    defaultConfig {
+        applicationId "org.bombayneurosciences.bna_2023"
+        minSdk 26 
+        targetSdk 35
+        versionCode 98
+        versionName "11.8"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        pass-devcmpl@123
+//        key alice-key0
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug
+                {
+                    minifyEnabled false
+                    proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+   /* kapt {
+        correctErrorTypes = true
+    }*/
+
+    buildscript {
+        dependencies {
+            classpath 'com.google.gms:google-services:4.3.10' // Use the latest version
+
+            //noinspection GradlePluginVersion
+            classpath 'com.android.tools.build:gradle:2.3.1'
+
+        }
+    }
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+        exclude("META-INF/DEPENDENCIES")
+    }
+
+
+//    buildToolsVersion '35.0.0 rc4'
+//    buildToolsVersion '35.0.0'
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'com.google.android.play:app-update-ktx:2.1.0'
+    implementation 'androidx.activity:activity:1.9.1'
+    implementation 'com.google.firebase:firebase-messaging:24.0.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    // Use the latest version of the Firebase BoM
+    implementation(platform('com.google.firebase:firebase-bom:33.1.0'))
+
+    // When using the BoM, you don't need to specify versions for individual Firebase libraries
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+//ImportImges
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:5.0.0-rc01'
+    kapt 'com.github.bumptech.glide:compiler:5.0.0-rc01'
+
+//Api Call
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.8.2'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.8.2'
+
+
+   /* def room_version = "2.6.1" // latest stable as of now
+
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"*/
+
+ //noinspection GradlePluginVersion
+    implementation('androidx.room:room-ktx:2.6.1')
+    implementation 'androidx.room:room-runtime:2.6.1' // Use the latest version
+    kapt 'androidx.room:room-compiler:2.6.1' // Use the latest version
+
+
+
+    androidTestImplementation 'androidx.room:room-testing:2.6.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1'
+
+    implementation 'com.airbnb.android:lottie:6.4.1'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+    kapt 'com.github.bumptech.glide:compiler:4.16.0'
+
+
+    implementation 'org.jsoup:jsoup:1.17.2'
+    implementation 'com.intuit.ssp:ssp-android:1.1.1'
+    implementation 'com.intuit.sdp:sdp-android:1.1.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.28'
+
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.19.1'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.19.1'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation("com.google.android.play:app-update-ktx:2.1.0")
+
+//
+//    //pdf
+//   implementation 'org.jsoup:jsoup:1.14.3'
+////    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0'
+//
+    implementation("com.google.android.play:app-update:2.1.0")
+
+    implementation ('com.squareup.okhttp3:logging-interceptor:4.12.0')
+    implementation ("com.squareup.retrofit2:converter-scalars:2.11.0")
+
+    implementation 'com.karumi:dexter:6.2.2'
+
+//    implementation ("com.github.chrisbanes:PhotoView:2.3.0")
+
+    implementation 'androidx.viewpager2:viewpager2:1.1.0'
+
+    implementation 'org.jsoup:jsoup:1.16.1'
+
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+    implementation 'me.leolin:ShortcutBadger:1.1.22@aar'
+    implementation("com.google.auth:google-auth-library-oauth2-http:1.3.0")
+
+
+//
+//    // For Kotlin users also import the Kotlin extensions library for Play In-App Update:
+}

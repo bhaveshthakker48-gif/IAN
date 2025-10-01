@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <!--<base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+
+        </trust-anchors>
+
+    </base-config>-->
+
+    <!-- <domain-config cleartextTrafficPermitted="true">
+         <domain includeSubdomains="true">192.168.0.160</domain>
+     </domain-config>-->
+    <domain-config cleartextTrafficPermitted="true">
+
+        <domain includeSubdomains="true">telemedocket.com</domain>
+    </domain-config>
+</network-security-config>
+
+
+
+

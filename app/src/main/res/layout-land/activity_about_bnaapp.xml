@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activity.AboutBNAAppActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="15dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_privacy"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backbutton"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:layout_marginStart="10dp"
+
+                />
+            <TextView
+                android:id="@+id/eventheader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About BNA App"
+                android:textColor="@android:color/black"
+                android:textSize="17dp"
+                android:singleLine="true"
+                android:layout_marginEnd="20dp"
+                android:visibility="visible"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/backbutton"
+                android:layout_marginStart="18dp"
+                android:layout_centerVertical="true"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView"
+                android:layout_width="@dimen/_175sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="1dp"
+                />
+
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <ScrollView
+        android:layout_below="@id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_above="@+id/relative"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <!--<TextView
+                android:id="@+id/AboutBNAContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about_bna_app_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="20dp"
+                android:justificationMode="inter_word"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="30dp"/>-->
+
+            <TextView
+                android:id="@+id/AboutBNAContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This App is meant for use by BNA members as well as delegates attending BNA meetings. The app offers many features to ensure connectivity of users with BNA as well as access to regular academic and learning content from BNA. App gives access to:"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="20dp"
+                android:justificationMode="inter_word"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="30dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="•"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="15dp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notification from BNA to update users about upcoming events, academic activities, journal issues, etc"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="•"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="15dp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Event details for quarterly &amp; annual meetings with detailed Scientific Program"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"/>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="•"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="15dp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Journal of BNA, published at regular intervals"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="•"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="15dp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Interesting Cases that help users to learn and also participate with comments"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="•"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="15dp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Participate and win prizes in Quiz during events, through the Voting section"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:justificationMode="inter_word"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="10dp"/>
+
+
+            </LinearLayout>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_bna_app_content"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="15dp"
+                android:justificationMode="inter_word"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/vertion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:text="vertion"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
